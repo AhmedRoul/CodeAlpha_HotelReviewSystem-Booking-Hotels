@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://database-hotel-booking-hotel-review-system.j.aivencloud.com:27030/defaultdb?ssl=require
+    username: avnadmin
+    password: AVNS_kadDtIRyFD_pNme19Tz
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
