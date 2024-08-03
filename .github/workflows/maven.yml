@@ -1,4 +1,4 @@
-name: Build and Run Docker Container
+name: Build and Run Docker Containerd
 
 on:
   push:
