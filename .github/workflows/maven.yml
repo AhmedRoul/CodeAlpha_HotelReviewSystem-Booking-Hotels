@@ -27,3 +27,4 @@ jobs:
 
     - name: Run Docker container
       run: docker run -e DB_URL=${{ secrets.DB_URL }} -e MAILDEV_URL=${{ secrets.MAILDEV_URL }} -e ACTIVE_PROFILE=dev -e JAR_VERSION=1.0.0 -p 8088:8088 hotel-review-system-build
+      
