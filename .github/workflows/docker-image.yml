@@ -9,16 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-   
+
     steps:
-     - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-     - name: Initialize submodules
-    run: git submodule update --init --recursive
+      - name: Initialize submodules
+        run: git submodule update --init --recursive
 
-     - name: List files
-    run: ls -R
+      - name: List files
+        run: ls -R
 
-  - name: Build the Docker image
-    run: docker build --no-cache --target build -t hotel-review-system-build -f Docker/backend/Dockerfile .
+      - name: Build the Docker image
+        run: docker build --no-cache --target build -t hotel-review-system-build -f Docker/backend/Dockerfile .
