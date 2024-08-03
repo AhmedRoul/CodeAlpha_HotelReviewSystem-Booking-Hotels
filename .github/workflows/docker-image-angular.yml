@@ -32,4 +32,4 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
-          docker buildx build --push --tag ${{ secrets.DOCKER_USERNAME }}/hotel-booking-ui:latest .
+          docker buildx build --push --tag ${{ secrets.DOCKER_USERNAME }}/hotel-booking-ui:latest -f docker/Dockerfile .
