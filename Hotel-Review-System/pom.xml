@@ -11,7 +11,9 @@
 	<groupId>com.HotelReviewSystem</groupId>
 	<artifactId>Hotel-Review-System</artifactId>
 	<version>1.0.0</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
+
+
 	<name>Hotel-Review-System</name>
 	<description>The Hotel Review System is a web application designed to allow users to share and read reviews about various hotels. The system enables hotel guests to rate their experiences, provide detailed feedback, and read reviews from other guests to make informed decisions about where to stay. This project aims to enhance the travel experience by creating a platform for transparent and honest hotel reviews.</description>
 	<properties>

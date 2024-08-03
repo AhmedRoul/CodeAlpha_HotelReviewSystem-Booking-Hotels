@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    image: bsn/bsn:1.0.0
+    container_name: hotel-review-system
+    ports:
+      - "8088:8088"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://database-hotel-booking-hotel-review-system.j.aivencloud.com:27030/defaultdb?ssl=require
+      - SPRING_DATASOURCE_USERNAME=avnadmin
+      - SPRING_DATASOURCE_PASSWORD=AVNS_kadDtIRyFD_pNme19Tz
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=org.postgresql.Driver
+      - SPRING_JPA_HIBERNATE_DDL-AUTO=update
+      - SPRING_APPLICATION_NAME=Hotel-Review-System
+      - SPRING_OUTPUT_ANSI_ENABLED=ALWAYS
+    depends_on:
+      - maildev
+
+  maildev:
+    image: maildev/maildev
+    container_name: maildev
+    ports:
+      - "1080:80"  # Web interface
+      - "1025:25"  # SMTP server
+    environment:
+      - MAILDEV_URL=localhost
